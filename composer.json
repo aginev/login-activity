@@ -1,7 +1,7 @@
 {
     "name": "aginev/login-activity",
     "description": "Trach users login activity for Laravel 5",
-	  "keywords": ["login activity", "login activity for Laravel 5", 'Laravel 5 login activity'],
+	  "keywords": ["login activity", "login activity for Laravel 5", "Laravel 5 login activity"],
     "homepage": "http://aginev.com",
     "license": "MIT",
     "authors": [
