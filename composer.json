@@ -1,0 +1,21 @@
+{
+    "name": "aginev/login-activity",
+    "description": "Trach users login activity for Laravel 5",
+	  "keywords": ["login activity", "login activity for Laravel 5", 'Laravel 5 login activity'],
+    "homepage": "http://aginev.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Atanas Ginev",
+            "email": "naskospam@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Aginev\\LoginActivity\\" : "src"
+        }
+    },
+    "require": {
+        
+    }
+}
