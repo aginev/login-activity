@@ -3,6 +3,7 @@
 namespace Aginev\LoginActivity;
 
 use Illuminate\Events\Dispatcher;
+use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 use Aginev\LoginActivity\Exceptions\LoginActivityException;
 
@@ -29,8 +30,8 @@ class LoginActivityServiceProvider extends ServiceProvider
             return new LoginActivity($app->make(Handlers\LogActivityInterface::class));
         });
 
-        // Add alias for LoginActivityFacade
-        $this->app->alias('LoginActivity', LoginActivityFacade::class);
+        // register aliases
+        AliasLoader::getInstance()->alias("LoginActivity", LoginActivityFacade::class);
     }
 
     /**
