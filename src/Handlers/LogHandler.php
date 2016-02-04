@@ -73,13 +73,13 @@ class LogHandler implements LogActivityInterface
     }
 
     /**
-     * Get latest logs
+     * Get getLatest logs
      *
      * @param null $limit
      * @return mixed|void
      * @throws LoginActivityException
      */
-    public function latestLogs($limit = null) {
+    public function getLatestLogs($limit = null) {
         throw new LoginActivityException('Not able to get logs from file');
     }
 
@@ -93,13 +93,13 @@ class LogHandler implements LogActivityInterface
     }
 
     /**
-     * Get latest login logs
+     * Get getLatest login logs
      *
      * @param null $limit
      * @return mixed|void
      * @throws LoginActivityException
      */
-    public function latestLoginLogs($limit = null) {
+    public function getLatestLoginLogs($limit = null) {
         throw new LoginActivityException('Not able to get logs from file');
     }
 
@@ -112,13 +112,13 @@ class LogHandler implements LogActivityInterface
     }
 
     /**
-     * Get latest logout logs
+     * Get getLatest logout logs
      *
      * @param null $limit
      * @return mixed|void
      * @throws LoginActivityException
      */
-    public function latestLogoutLogs($limit = null) {
+    public function getLatestLogoutLogs($limit = null) {
         throw new LoginActivityException('Not able to get logs from file');
     }
 }

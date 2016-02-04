@@ -34,24 +34,24 @@ class LoginActivity
         return $this->handler->getLogs();
     }
 
-    public function latestLogs($limit = null) {
-        return $this->handler->latestLogs($limit);
+    public function getLatestLogs($limit = null) {
+        return $this->handler->getLatestLogs($limit);
     }
 
     public function getLoginLogs() {
         return $this->handler->getLoginLogs();
     }
 
-    public function latestLoginLogs($limit = null) {
-        return $this->handler->latestLoginLogs($limit);
+    public function getLatestLoginLogs($limit = null) {
+        return $this->handler->getLatestLoginLogs($limit);
     }
 
     public function getLogoutLogs() {
         return $this->handler->getLogoutLogs();
     }
 
-    public function latestLogoutLogs($limit = null) {
-        return $this->handler->latestLogoutLogs($limit);
+    public function getLatestLogoutLogs($limit = null) {
+        return $this->handler->getLatestLogoutLogs($limit);
     }
 
 }

@@ -41,12 +41,12 @@ interface LogActivityInterface
     public function getLogs();
 
     /**
-     * Get latest logs
+     * Get getLatest logs
      *
      * @param null $limit
      * @return mixed
      */
-    public function latestLogs($limit = null);
+    public function getLatestLogs($limit = null);
 
     /**
      * Get login logs
@@ -56,12 +56,12 @@ interface LogActivityInterface
     public function getLoginLogs();
 
     /**
-     * Get latest login logs
+     * Get getLatest login logs
      *
      * @param null $limit
      * @return mixed
      */
-    public function latestLoginLogs($limit = null);
+    public function getLatestLoginLogs($limit = null);
 
     /**
      * Get logout logs
@@ -71,10 +71,10 @@ interface LogActivityInterface
     public function getLogoutLogs();
 
     /**
-     * Get latest logout logs
+     * Get getLatest logout logs
      *
      * @param null $limit
      * @return mixed
      */
-    public function latestLogoutLogs($limit = null);
+    public function getLatestLogoutLogs($limit = null);
 }
