@@ -6,20 +6,25 @@ return [
      *
      * Set to false to disable this feature.
      */
-    'track_login'  => true,
+    'track_login'           => true,
 
     /**
      * Track user logout.
      *
      * Set to false to disable this feature.
      */
-    'track_logout' => true,
+    'track_logout'          => true,
 
     /**
      * Where to store logs
      *
-     * eloquent - In database
-     * log      - In laravel log files
+     * \Aginev\LoginActivity\Handlers\EloquentHandler::class - In database
+     * \Aginev\LoginActivity\Handlers\LogHandler::class      - In laravel log files
      */
-    'log'          => 'eloquent'
+    'log'                   => \Aginev\LoginActivity\Handlers\EloquentHandler::class,
+
+    /**
+     * Number of latest logs to be returned
+     */
+    'number_of_latest_logs' => 100,
 ];
