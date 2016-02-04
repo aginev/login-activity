@@ -61,12 +61,6 @@ class LoginActivityServiceProvider extends ServiceProvider
      * @throws LoginActivityException
      */
     private function registerHandlerBinding() {
-        $handler = ucfirst(config('login-activity.log', 'eloquent'));
-
-        if (!in_array($handler, ['Eloquent', 'Log'])) {
-            throw new LoginActivityException('Invalid log type!');
-        }
-
-        $this->app->bind(Handlers\LogActivityInterface::class, '\Aginev\LoginActivity\Handlers\\' . $handler . 'Handler');
+        $this->app->bind(Handlers\LogActivityInterface::class, config('login-activity.log', Handlers\EloquentHandler::class));
     }
 }

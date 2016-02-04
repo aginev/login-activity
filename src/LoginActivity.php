@@ -30,4 +30,28 @@ class LoginActivity
         $this->handler->cleanLog($offset);
     }
 
+    public function getLogs() {
+        return $this->handler->getLogs();
+    }
+
+    public function latestLogs($limit = null) {
+        return $this->handler->latestLogs($limit);
+    }
+
+    public function getLoginLogs() {
+        return $this->handler->getLoginLogs();
+    }
+
+    public function latestLoginLogs($limit = null) {
+        return $this->handler->latestLoginLogs($limit);
+    }
+
+    public function getLogoutLogs() {
+        return $this->handler->getLogoutLogs();
+    }
+
+    public function latestLogoutLogs($limit = null) {
+        return $this->handler->latestLogoutLogs($limit);
+    }
+
 }
