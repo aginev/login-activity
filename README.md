@@ -53,37 +53,37 @@ php artisan vendor:publish --provider="Aginev\LoginActivity\LoginActivityService
 
 Get logs
 ```php
-$logs = LoginActivity::getLogs()->get();
+$logs = \LoginActivity::getLogs()->get();
 ```
 
 Get latest logs
 ```php
-$logs = LoginActivity::getLatestLogs(100); // number of logs to get or leave empty if you want to use the config value
+$logs = \LoginActivity::getLatestLogs(100); // number of logs to get or leave empty if you want to use the config value
 ```
 
 Get login logs
 ```php
-$logs = LoginActivity::getLoginLogs()->get();
+$logs = \LoginActivity::getLoginLogs()->get();
 ```
 
 Get latest login logs
 ```php
-$logs = LoginActivity::getLatestLoginLogs(100); // number of logs to get or leave empty if you want to use the config value
+$logs = \LoginActivity::getLatestLoginLogs(100); // number of logs to get or leave empty if you want to use the config value
 ```
 
 Get logout logs
 ```php
-$logs = LoginActivity::getLogoutLogs()->get();
+$logs = \LoginActivity::getLogoutLogs()->get();
 ```
 
 Get latest logout logs
 ```php
-$logs = LoginActivity::getLatestLogoutLogs(100); // number of logs to get or leave empty if you want to use the config value
+$logs = \LoginActivity::getLatestLogoutLogs(100); // number of logs to get or leave empty if you want to use the config value
 ```
 
 Clean log
 ```php
-$logs = LoginActivity::cleanLog(30); // Offset in days
+$logs = \LoginActivity::cleanLog(30); // Offset in days
 ```
 
 Clean the log from terminal
