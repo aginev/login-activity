@@ -63,4 +63,62 @@ class LogHandler implements LogActivityInterface
 
         return true;
     }
+
+    /**
+     * Get all logs
+     * @throws LoginActivityException
+     */
+    public function getLogs() {
+        throw new LoginActivityException('Not able to get logs from file');
+    }
+
+    /**
+     * Get latest logs
+     *
+     * @param null $limit
+     * @return mixed|void
+     * @throws LoginActivityException
+     */
+    public function latestLogs($limit = null) {
+        throw new LoginActivityException('Not able to get logs from file');
+    }
+
+
+    /**
+     * Get login logs
+     * @throws LoginActivityException
+     */
+    public function getLoginLogs() {
+        throw new LoginActivityException('Not able to get logs from file');
+    }
+
+    /**
+     * Get latest login logs
+     *
+     * @param null $limit
+     * @return mixed|void
+     * @throws LoginActivityException
+     */
+    public function latestLoginLogs($limit = null) {
+        throw new LoginActivityException('Not able to get logs from file');
+    }
+
+    /**
+     * Get logout logs
+     * @throws LoginActivityException
+     */
+    public function getLogoutLogs() {
+        throw new LoginActivityException('Not able to get logs from file');
+    }
+
+    /**
+     * Get latest logout logs
+     *
+     * @param null $limit
+     * @return mixed|void
+     * @throws LoginActivityException
+     */
+    public function latestLogoutLogs($limit = null) {
+        throw new LoginActivityException('Not able to get logs from file');
+    }
 }

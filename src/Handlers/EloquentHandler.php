@@ -2,11 +2,11 @@
 
 namespace Aginev\LoginActivity\Handlers;
 
-use Aginev\LoginActivity\Models\UserLoginActivity;
 use Carbon\Carbon;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Support\Facades\Request;
+use Aginev\LoginActivity\Models\UserLoginActivity;
 
 class EloquentHandler implements LogActivityInterface
 {
