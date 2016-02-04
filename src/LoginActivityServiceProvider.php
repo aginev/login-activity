@@ -24,10 +24,11 @@ class LoginActivityServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        // Call this always before the handler binding
         $this->registerHandlerBinding();
 
-        $this->app->bind('Aginev\LoginActivity', function ($app) {
-            return new LoginActivity($app->make(Handlers\LogActivityInterface::class));
+        $this->app->bind('Aginev\LoginActivityHandler', function ($app) {
+            return $app->make(Handlers\LogActivityInterface::class);
         });
 
         // register aliases

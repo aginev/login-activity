@@ -13,6 +13,6 @@ class LoginActivityFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'Aginev\LoginActivity';
+        return 'Aginev\LoginActivityHandler';
     }
 }
