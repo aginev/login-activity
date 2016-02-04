@@ -32,14 +32,18 @@ class LoginActivityListener
      */
     public function subscribe($events)
     {
-        $events->listen(
-            \Illuminate\Auth\Events\Login::class,
-            'Aginev\LoginActivity\LoginActivityListener@onUserLogin'
-        );
+        if (config('login-activity.track_login', false)) {
+            $events->listen(
+                \Illuminate\Auth\Events\Login::class,
+                'Aginev\LoginActivity\LoginActivityListener@onUserLogin'
+            );
+        }
 
-        $events->listen(
-            \Illuminate\Auth\Events\Logout::class,
-            'Aginev\LoginActivity\LoginActivityListener@onUserLogout'
-        );
+        if (config('login-activity.track_logout', false)) {
+            $events->listen(
+                \Illuminate\Auth\Events\Logout::class,
+                'Aginev\LoginActivity\LoginActivityListener@onUserLogout'
+            );
+        }
     }
 }
