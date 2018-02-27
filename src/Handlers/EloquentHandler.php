@@ -67,7 +67,7 @@ class EloquentHandler implements LogActivityInterface
      * @return mixed
      */
     public function getLatestLogs($limit = null) {
-        return UserLoginActivity::take($this->setLimit($limit))->get();
+        return UserLoginActivity::latest()->take($this->setLimit($limit))->get();
     }
 
 
@@ -87,7 +87,7 @@ class EloquentHandler implements LogActivityInterface
      * @return mixed
      */
     public function getLatestLoginLogs($limit = null) {
-        return UserLoginActivity::where('event', '=', 'login')->take($this->setLimit($limit))->get();
+        return UserLoginActivity::latest()->where('event', '=', 'login')->take($this->setLimit($limit))->get();
     }
 
     /**
@@ -106,7 +106,7 @@ class EloquentHandler implements LogActivityInterface
      * @return mixed
      */
     public function getLatestLogoutLogs($limit = null) {
-        return UserLoginActivity::where('event', '=', 'logout')->take($this->setLimit($limit))->get();
+        return UserLoginActivity::latest()->where('event', '=', 'logout')->take($this->setLimit($limit))->get();
     }
 
     /**
